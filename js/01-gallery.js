@@ -28,8 +28,12 @@ function createMyLigthBox(dataAtr) {
   img = instance;
 }
 function urlHandler(e) {
-  createMyLigthBox(e.target.getAttribute("data-source"));
-  img.show();
+  if (e.target.nodeName === "IMG") {
+    createMyLigthBox(e.target.getAttribute("data-source"));
+    img.show();
+  } else {
+    return;
+  }
 }
 
 window.addEventListener("keydown", (e) => {

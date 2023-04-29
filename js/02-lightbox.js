@@ -17,8 +17,7 @@ let newArr = galleryItems
   })
   .join("");
 ul.insertAdjacentHTML("afterbegin", newArr);
-var lightbox = new SimpleLightbox(".gallery__link", {
+ new SimpleLightbox(".gallery__link", {
   captionsData: "alt",
   captionDelay: "250",
-  captionPosition: "bottom",
 });
